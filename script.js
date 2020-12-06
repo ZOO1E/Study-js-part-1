@@ -26,7 +26,7 @@ let job1 ='programmer';
 let job2 ='teacher';
 
 console.log(myFirstjob);
-*/
+
 
 
 let javascriprIsFun = true;
@@ -49,3 +49,20 @@ year =1991;
 console.log(typeof year);
 
 console.log(typeof null);
+*/
+
+let age = 30;
+age = 31;
+console.log(age);
+
+const birthyear = 1991;
+//birthyear =1990; -> immutable!!
+console.log(birthyear);
+
+
+var job ='programmer';
+job ='teacher';
+console.log(job);
+
+lastname = 'Schmedman';
+console.log(lastname);/* we must declare selections!*/
