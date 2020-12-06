@@ -1,3 +1,4 @@
+/*
 let js = 'amazing';
 if (js === 'amazing') alert('javascript is FUN!');
 
@@ -13,6 +14,7 @@ console.log(firstName);
 console.log(firstName);
 console.log(firstName);
 
+//Variable name conventions 
 let $function = 27;
 
 let person = 'jonas';
@@ -24,3 +26,26 @@ let job1 ='programmer';
 let job2 ='teacher';
 
 console.log(myFirstjob);
+*/
+
+
+let javascriprIsFun = true;
+console.log(javascriprIsFun);
+
+console.log(typeof true);
+console.log(typeof javascriptisFun);
+console.log(typeof 23);
+console.log(typeof 'jonas');
+
+
+javascriptIsFun ='YES!';
+console.log(typeof true);
+
+let year;
+console.log(year);
+console.log(typeof year);
+
+year =1991;
+console.log(typeof year);
+
+console.log(typeof null);
