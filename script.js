@@ -147,7 +147,7 @@ let height ; // undefined
 if (height){
      console.log('Yay! Height is defined');
 }else{
-     console.log('Height is undefined!') */
+     console.log('Height is undefined!') 
 
      //22 equality
      const age = 18; // just equal 주로 이걸 씀
@@ -159,5 +159,32 @@ if (height){
 
 const favorite = prompt("what's your favorite number?");
 console.log(favorite);
-console.log(typeof favorite);
+console.log(typeof favorite);*/
 
+
+//24.Logical operators
+
+const hasDriversLincense = true; // A
+const hasGoodVision = true ; //B
+
+console.log(hasDriversLincense && hasGoodVision );//and
+console.log(hasDriversLincense || hasGoodVision );//or
+console.log(!hasDriversLincense);
+
+const shouldDrive = hasDriversLincense && hasGoodVision ;
+
+if (shouldDrive){
+     console.log('Sarah is able to drive')
+}     else{
+     console.log('someone else should drive..');
+     }
+
+     const isTired =false; //C
+     console.log(hasDriversLincense || hasGoodVision || isTired);
+
+     if ( hasDriversLincense && hasGoodVision && !isTired){
+          console.log('Sarah is able to drive')
+     }     else{
+          console.log('someone else should drive..');
+          }
+     
