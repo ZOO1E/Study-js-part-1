@@ -159,7 +159,7 @@ if (height){
 
 const favorite = prompt("what's your favorite number?");
 console.log(favorite);
-console.log(typeof favorite);*/
+console.log(typeof favorite);
 
 
 //24.Logical operators
@@ -187,4 +187,75 @@ if (shouldDrive){
      }     else{
           console.log('someone else should drive..');
           }
+          
+          
+          //25.the switch statement
+          const day = 'saturday';
+
+          switch(day){ // more useful that i think with Jonas 
+               case 'monday': //day === 'monday'
+               console.log('Plan weekday');
+               console.log('Go to coding meet up');
+               break;
+
+               case 'tuesday':
+               console.log('prepare theory wideos');
+               break;
+
+               case 'wednseday':
+               case 'thursday':
+               console.log('Write code example ')
+               break;
+
+               case 'friday' :
+               case 'saturday':
+               console.log('Rest time :D ');
+               break;
+          default:
+               console.log('Not a valid day!')
+          }
      
+          //Above Ex change to if/else paragraph !
+     if(day === 'wednseday' ||'thursday' ){
+               console.log('Write code example ')
+     }else if(day === 'monday' ){
+          console.log('Plan weekday');
+          console.log('Go to coding meet up');
+     }else if(day === 'tuesday'){
+          console.log('prepare theory wideos');
+     }else if(day === 'friday' || 'saturday'){
+          console.log('Rest time :D ');
+     }else {
+          console.log('Not a valid day!')
+     } */
+
+     //27.Statement and Expression
+     3 + 4 
+     1991
+     true && false && !false //statement
+
+     if (23 >10){
+          const str ='23 is a bigger'
+      }
+// expression(const me =??) produce value , statement(if else and so on...) like a full sentence that translate our actions 
+
+
+
+//28.The conditional operators
+const age = 23;
+age >= 18 ? console.log('i like to drink wine'):// if part
+console.log('i like to drink water'); //else part
+
+const drink = age >= 18 ? 'wine': 'water';
+console.log(drink); //ternary(3 dimension)  more useful !! 
+
+let drink2;
+if (age >= 18){
+     drink2 = 'wine;'
+}else{
+     drink2 ='water';
+}
+console.log(drink2);
+
+//why useful? we can insert to log tag !!!!
+console.log('i like to drink' + age >= 18 ? 'wine': 'water')
