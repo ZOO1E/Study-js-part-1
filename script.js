@@ -126,7 +126,7 @@ console.log('23' * '2'); //46
 console.log('23' > '18');// string to number
 let n = '1' + 1 ; // string로 인식
 n = n -1; // number로 인식
-console.log(n); //10 연산자에 따라서 string과 number가 달라짐!! */
+console.log(n); //10 연산자에 따라서 string과 number가 달라짐!! 
 
 //21.Truthy and Faisy Values
 //5 falsy valuse:0 , '' ,undefined, null , NaN
@@ -147,8 +147,17 @@ let height ; // undefined
 if (height){
      console.log('Yay! Height is defined');
 }else{
-     console.log('Height is undefined!')
-}
+     console.log('Height is undefined!') */
 
+     //22 equality
+     const age = 18; // just equal 주로 이걸 씀
+     console.log()
+     if (age===18) console.log('you just became an adult(strixt)'); // comparision equal
+          // == :loose equal (be able to do coerision)
+          //===: strict equal (do not coerision)
+          if (age===18) console.log('you just became an adult(loose)');
 
+const favorite = prompt("what's your favorite number?");
+console.log(favorite);
+console.log(typeof favorite);
 
