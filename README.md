@@ -1,1 +1,1 @@
-# Study-js-part-1
+# Study-JavaScript
