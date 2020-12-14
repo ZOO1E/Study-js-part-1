@@ -69,7 +69,7 @@ const yearsUntilRetirement = (birthYear , firsname) => { // Arrow는 한 함수�
 }
 
 console.log(yearsUntilRetirement(1991 , 'Juwon'));
-console.log(yearsUntilRetirement(1980 , 'Bob')); */
+console.log(yearsUntilRetirement(1980 , 'Bob')); 
 
 //36.calling one function other
 function cutFruitPieces(fruit){
@@ -82,4 +82,25 @@ function fruitProcessor(apples , oranges){
     const juice = 'Juice with ' + applePieces+ ' applesPices and ' + orangePieces +' orangesPieces.';
     return juice;    
 }
-console.log(fruitProcessor(2,3));
+console.log(fruitProcessor(2,3));*/
+const calcAge = function(birthYear){ //간단한 변수로 바꿔도 상관 X
+    return 2037 -birthYear;
+}
+
+const yearsUntilRetirement = function(birthYear , firstname)  { // Arrow는 한 함수에 return을 해야하는게 2개 있을때
+    const age = calcAge(birthYear);
+    const retirement = 65 - age ; 
+    if(retirement > 0 ){
+        console.log(firstname + 'retires in ' + retirement + 'years');
+        return retirement;// console같은 명령어는 return의 앞에 있어야 효력이 있음
+        
+    }else{
+        console.log(firstname+'has already retired');
+        return -1 ; // 
+       
+    }
+   // return firsname + 'retires in ' + retirement + 'years';
+   //return retirement;
+}
+console.log(yearsUntilRetirement(1991,'Juwon'));
+console.log(yearsUntilRetirement(1950,'Mike'));
