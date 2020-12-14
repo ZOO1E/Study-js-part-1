@@ -49,7 +49,7 @@ const calcAge2 = function (birthYear){
 }
 const age2 = calcAge2(1991);
 
-console.log(age1,age2); */
+console.log(age1,age2); 
 
 
 //35.Function Arrow
@@ -69,4 +69,17 @@ const yearsUntilRetirement = (birthYear , firsname) => { // Arrow는 한 함수�
 }
 
 console.log(yearsUntilRetirement(1991 , 'Juwon'));
-console.log(yearsUntilRetirement(1980 , 'Bob'));
+console.log(yearsUntilRetirement(1980 , 'Bob')); */
+
+//36.calling one function other
+function cutFruitPieces(fruit){
+    return fruit*4;
+}
+
+function fruitProcessor(apples , oranges){
+    const  applePieces = cutFruitPieces(apples);
+    const orangePieces = cutFruitPieces(oranges);
+    const juice = 'Juice with ' + applePieces+ ' applesPices and ' + orangePieces +' orangesPieces.';
+    return juice;    
+}
+console.log(fruitProcessor(2,3));
