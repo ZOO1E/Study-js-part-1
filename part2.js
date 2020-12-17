@@ -82,7 +82,7 @@ function fruitProcessor(apples , oranges){
     const juice = 'Juice with ' + applePieces+ ' applesPices and ' + orangePieces +' orangesPieces.';
     return juice;    
 }
-console.log(fruitProcessor(2,3));*/
+console.log(fruitProcessor(2,3));
 const calcAge = function(birthYear){ //간단한 변수로 바꿔도 상관 X
     return 2037 -birthYear;
 }
@@ -103,4 +103,74 @@ const yearsUntilRetirement = function(birthYear , firstname)  { // Arrow는 한 
    //return retirement;
 }
 console.log(yearsUntilRetirement(1991,'Juwon'));
-console.log(yearsUntilRetirement(1950,'Mike'));
+console.log(yearsUntilRetirement(1950,'Mike')); 
+
+//introduction to Arrays
+const friend1 = 'michel';
+const frined2 = 'steven';
+const freind3 ='Peter';
+
+const freinds = ['Michael','Steven' ,'Peter'];
+console.log(freinds);
+
+const Years = new Array(1991 ,1983 ,2000 ,2020);//Array function
+
+console.log(freinds[0]) //pick Michael
+console.log(freinds[2])
+
+ console.log(freinds.length);
+ console.log(freinds[freinds.length-1])
+
+freinds[2] = 'Jay'; // Array is not a primitive value so we can change Peter to Jay
+console.log(freinds);
+//freinds =['Bob','Alice']
+
+const firstname = 'jonas';
+const jonas  = [firstname,'jonas','schmedman',2037-1991]
+
+
+//Exercise
+const calcAge = function (birthYear){
+    return 2037 - birthYear;
+}
+const years =[1990,1967,2010,2002,2018];
+
+calcAge(years);
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length -1])
+console.log(age1,age2,age3);
+
+const ages =[calcAge(years[0]), calcAge(years[1]),calcAge(years[years.length-1])];
+console.log(ages);*/
+
+//40 Array operation
+const friends = ['Michael','Steven' ,'Peter'];
+//Add element
+const newLength = friends.push('jay');// ["Michael", "Steven", "Peter", "jay"]
+console.log(newLength);
+console.log(friends);
+
+friends.unshift('John');//["John", "Michael", "Steven", "Peter", "jay"]
+console.log(friends);
+
+//remove element
+friends.pop(); //remove Last element
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); //First
+console.log(friends);
+
+console.log(friends.indexOf('Steven'));
+console.log(friends.indexOf('Bob'));
+
+friends.push(23);
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Bob'));
+console.log(friends.includes(23)); //number is not string
+
+if(friends.includes('Steven')){
+    console.log('Fuck you!!')
+}
