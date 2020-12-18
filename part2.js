@@ -194,23 +194,42 @@ const jonas = {//five keys
 //but array에서는 순서가 중요합니다!*/
  
 //Dot 
-
-const jonas = {//five keys
-    firstName :'jona',
+'use strict';
+const jonas = { //five keys
+    firstName :'jonas',
     lastName : 'ssdssds',
     age :2037-1991 ,
     job: 'teacher',
-    friends:['ses','holy' ,'shit']
+    friends:['ses','holy' ,'Michael']
 };
 console.log(jonas); 
 
 console.log(jonas.lastName);//Dot!
- console.log(jonas['lastName']);
+ console.log(jonas['lastName']);//put any expression that we'd like
 
 const nameKey = 'Name';
-console.log(jonas['first' + namekey]);
-console.log(jonas['last' + namekey]); //이렇게 표현해도 됨! lastName
+console.log(jonas['first' +nameKey]); // = jona 
+console.log(jonas['last' +nameKey]); //이렇게 표현해도 됨! lastName
 
-//console.log(jonas.'last' + namekey)
+//console.log(jonas.'last' + namekey)//so we need brekets property
+//Recap: brakets need compute the property name  
 
-const interestIn = prompt('What do you want to know abouyt Jonas? Choose between firstname ,lastname ,age ,job and ')
+const interestedIn = prompt('What do you want to know about Jonas? Choose between firstname ,lastname ,age ,job and friends');
+//console.log(jonas.interestedIn);// jonas does not have property
+  
+
+if (jonas[interestedIn]){ //undefined value is falsy
+    console.log(jonas[interestedIn]);
+}else {
+    console.log('Wrong request!Choose between firstname ,lastname ,age ,job and friends')
+}
+
+jonas.location = 'Portugal';
+jonas['twitter']='@jonaschecthmen';
+console.log(jonas);
+
+//Challenge
+//"jonas has 3 friends , and his best friend is called Michael"
+console.log(jonas.firstName + 'has' +  jonas.friends.length + 'friends, and his best friend is called' +  jonas.friends[2]);
+//중요한건 브라켓을 쓸때 object안에 있는 것들은 전부  string이기에 무조건 ''를 붙혀줘야환다!
+
