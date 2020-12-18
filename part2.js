@@ -142,16 +142,16 @@ const age3 = calcAge(years[years.length -1])
 console.log(age1,age2,age3);
 
 const ages =[calcAge(years[0]), calcAge(years[1]),calcAge(years[years.length-1])];
-console.log(ages);*/
+console.log(ages);
 
 //40 Array operation
 const friends = ['Michael','Steven' ,'Peter'];
 //Add element
 const newLength = friends.push('jay');// ["Michael", "Steven", "Peter", "jay"]
-console.log(newLength);
-console.log(friends);
+console.log(newLength); //3 -> 4
+console.log(friends); 
 
-friends.unshift('John');//["John", "Michael", "Steven", "Peter", "jay"]
+friends.unshift('John');//앞쪽에 위치하게 함["John", "Michael", "Steven", "Peter", "jay"]
 console.log(friends);
 
 //remove element
@@ -163,14 +163,54 @@ console.log(friends);
 friends.shift(); //First
 console.log(friends);
 
-console.log(friends.indexOf('Steven'));
-console.log(friends.indexOf('Bob'));
+console.log(friends.indexOf('Steven')); //steven이 있어? 일치 :1
+console.log(friends.indexOf('Bob'));//불일치 :-1
 
 friends.push(23);
-console.log(friends.includes('Steven'));
+console.log(friends.includes('Steven')); //true false
 console.log(friends.includes('Bob'));
 console.log(friends.includes(23)); //number is not string
 
 if(friends.includes('Steven')){
     console.log('Fuck you!!')
-}
+} 
+
+// intro
+const jarray =[
+    'jona',
+    'ssdssds',
+    '2037-1991',
+    'teacher',
+    ['ses','holy' ,'shit']
+];
+
+const jonas = {//five keys
+    firstName :'jona',
+    lastName : 'ssdssds',
+    age :2037-1991 ,
+    job: 'teacher',
+    friends:['ses','holy' ,'shit']
+};//objects의 순서는 중요치 않아요 -> unstructure data
+//but array에서는 순서가 중요합니다!*/
+ 
+//Dot 
+
+const jonas = {//five keys
+    firstName :'jona',
+    lastName : 'ssdssds',
+    age :2037-1991 ,
+    job: 'teacher',
+    friends:['ses','holy' ,'shit']
+};
+console.log(jonas); 
+
+console.log(jonas.lastName);//Dot!
+ console.log(jonas['lastName']);
+
+const nameKey = 'Name';
+console.log(jonas['first' + namekey]);
+console.log(jonas['last' + namekey]); //이렇게 표현해도 됨! lastName
+
+//console.log(jonas.'last' + namekey)
+
+const interestIn = prompt('What do you want to know abouyt Jonas? Choose between firstname ,lastname ,age ,job and ')
