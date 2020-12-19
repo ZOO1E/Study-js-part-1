@@ -191,7 +191,7 @@ const jonas = {//five keys
     job: 'teacher',
     friends:['ses','holy' ,'shit']
 };//objects의 순서는 중요치 않아요 -> unstructure data
-//but array에서는 순서가 중요합니다!*/
+//but array에서는 순서가 중요합니다!
  
 //Dot 
 'use strict';
@@ -232,4 +232,44 @@ console.log(jonas);
 //"jonas has 3 friends , and his best friend is called Michael"
 console.log(jonas.firstName + 'has' +  jonas.friends.length + 'friends, and his best friend is called' +  jonas.friends[2]);
 //중요한건 브라켓을 쓸때 object안에 있는 것들은 전부  string이기에 무조건 ''를 붙혀줘야환다!
+*/
+//Object methods
+const jonas = { //five keys
+    firstName :'jonas',
+    lastName : 'ssdssds',
+    birthYear : 1991 ,
+    job: 'teacher', //string value
+    friends:['ses','holy' ,'Michael'], //array vallue
+    hasDriver: true, // boolean value
+
+    // calcAge : function(birthYear){
+    //     return 2037 - birthYear; // function value
+    //}
+    calcAge : function(){
+        this.age = 2037 - this.birthYear; //위에서 배웠듯이 key추가
+        return this.age;   // function value
+    }  ,
+    getSummary : function(){ 
+        return jonas.firstName + 'is a ' 
+        + jonas.age +'- years old '
+         + jonas.job + ' and he has'
+          + (jonas.hasDriver ? ' a':' no') 
+          + ' diver license' }
+    
+                                    //this를 미리 쓰면은 key의 이름을 바꿨을때 전체를 다 수정해 줄 필요가 없다는 것.
+};                                  // function declaration은 안됭ㅓ
+
+
+console.log(jonas.calcAge());
+//console.log(jonas['calcAge'](1991));
+
+console.log(this.age); // this 는 key박스 안에서 적용가능!
+console.log(jonas.age);
+console.log(jonas.age);
+
+//Challenge
+//"jonas is a 46-years old teacher and he ahs a/no driver's license "
+console.log(jonas.getSummary());
+
+
 
