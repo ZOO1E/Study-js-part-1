@@ -232,7 +232,7 @@ console.log(jonas);
 //"jonas has 3 friends , and his best friend is called Michael"
 console.log(jonas.firstName + 'has' +  jonas.friends.length + 'friends, and his best friend is called' +  jonas.friends[2]);
 //중요한건 브라켓을 쓸때 object안에 있는 것들은 전부  string이기에 무조건 ''를 붙혀줘야환다!
-*/
+
 //Object methods
 const jonas = { //five keys
     firstName :'jonas',
@@ -270,6 +270,45 @@ console.log(jonas.age);
 //Challenge
 //"jonas is a 46-years old teacher and he ahs a/no driver's license "
 console.log(jonas.getSummary());
+
+// iteration :the for Loop
+// console.log('Lifting weights repetition 1');
+// console.log('Lifting weights repetition 2');
+// console.log('Lifting weights repetition 3');
+// console.log('Lifting weights repetition 4');
+// console.log('Lifting weights repetition 5');
+// console.log('Lifting weights repetition 6');
+// console.log('Lifting weights repetition 7');
+// console.log('Lifting weights repetition 8');
+// console.log('Lifting weights repetition 9');
+// console.log('Lifting weights repetition 10');
+
+//for loop keeps runnung while condition is TRUE
+for(let rep = 1 ; rep<11 ; rep ++ ){
+    console.log('Lifting weights repetition ' + rep );
+}
+*/
+
+const jonas = [
+    'jonas',
+    'schmedtmanm',
+    2037-1991,
+    'teacher',
+    ['Michael ' , 'Peter' , 'Steven'],
+    true
+];
+const types = [];
+// console.log(jonas[0]);
+// console.log(jonas[1]);
+// console.log(jonas[4]);
+//jonas[5] does NOT exist 
+
+for (let i = 0 ; i < jonas.length ; i++){
+    console.log(jonas[i], typeof jonas[i]);
+
+    types[i] = typeof jonas[i];
+}
+console.log(types);
 
 
 
