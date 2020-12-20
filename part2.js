@@ -287,7 +287,6 @@ console.log(jonas.getSummary());
 for(let rep = 1 ; rep<11 ; rep ++ ){
     console.log('Lifting weights repetition ' + rep );
 }
-*/
 
 const jonas = [
     'jonas',
@@ -297,6 +296,7 @@ const jonas = [
     ['Michael ' , 'Peter' , 'Steven'],
     true
 ];
+
 const types = [];
 // console.log(jonas[0]);
 // console.log(jonas[1]);
@@ -304,11 +304,76 @@ const types = [];
 //jonas[5] does NOT exist 
 
 for (let i = 0 ; i < jonas.length ; i++){
+    
     console.log(jonas[i], typeof jonas[i]);
-
-    types[i] = typeof jonas[i];
+//Filling types array
+    //types[i] = typeof jonas[i];
+    types.push(typeof jonas[i]);
 }
 console.log(types);
 
+const years =[1991,2007,1969,2020];
+const ages = [];
 
+for (let i = 0; i < years.length ; i++){
+    ages.push(2037-years[i]);
+}
+console.log(ages);
 
+//continue and break
+console.log('-----only string----')
+for (let i = 0 ; i < jonas.length ; i++){
+    if(typeof jonas[i] !== 'string') continue; //다음실해을 해버리는 것
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+console.log('-----break with number----')
+for (let i = 0 ; i < jonas.length ; i++){
+    if(typeof jonas[i] === 'number') break; //아예 끝내버리는 것
+    console.log(jonas[i], typeof jonas[i]);
+}
+
+//Looping backwards
+const jonas = [
+    'jonas',
+    'schmedtmanm',
+    2037-1991,
+    'teacher',
+    ['Michael ' , 'Peter' , 'Steven'],
+    true
+];
+//0 ,1,...,4
+//4,3,..,0
+
+for(let i = jonas.length-1; i >= 0; i--){
+    console.log(i,jonas[i]);
+}
+
+for(let exercise = 1; exercise <4 ; exercise++){
+console.log('--------Starting exercise-----'+ exercise);
+for (let rep =1 ; rep <6 ; rep++){
+    console.log('Exercise:'+exercise + ' Lifting weight repetition' + rep);
+}
+}
+*/
+
+//the while Loop
+
+// for(let rep = 1 ; rep<11 ; rep ++ ){
+//     console.log('Lifting weights repetition ' + rep );
+// }
+
+// let rep =1; 
+// while(rep <= 10){
+//     console.log('While : Lifting weights repetition ' + rep );
+//     rep++;
+// }
+
+let dice = Math.trunc(Math.random() * 6) +1;
+console.log(dice);
+
+while(dice !== 6){ //첨부터 6이면 아예 실행도 안됨!
+    console.log('you rolled a '+ dice);
+    dice = Math.trunc(Math.random() * 6) +1;
+    if(dice === 6 ) console.log('Loop is about to end');
+}
