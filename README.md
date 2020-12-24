@@ -1,1 +1,1 @@
-# Study-JavaScript
+# fundemtantals js 1,2
